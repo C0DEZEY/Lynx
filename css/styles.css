@@ -7,12 +7,11 @@
 }
 
 body {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
     color: inherit;
-    font-family: inherit;
     font-size: inherit;
     text-decoration: none;
 }
@@ -20,13 +19,19 @@ a {
     height: 1000px;
 }
 .about {
-    height: 1000px;
+    height: 890px;
 }
 .contact {
-    height: 1000px;
+    height: auto;
 }
 .team {
-    height: 1000px;
+    height: 850px;
+}
+.jobs{
+    height:850px;
+}
+.footer {
+    height: 25px;
 }
 section {
     width: 100%;
@@ -34,6 +39,13 @@ section {
     height: auto;
     position: relative;
 }
+/*  Create a fixed postion so you can't scrol while menus are open*/
+ .fixed-position {
+    position: fixed;
+ }
+  .free-position {
+      position: auto;
+  }
 #navbar {
     background: white;
     color: rgb(13, 26, 38);
@@ -70,7 +82,7 @@ section {
     font-size: 1.5em;
     height: 60px;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    
 }
 
 @media(max-width: 768px) {
@@ -116,8 +128,8 @@ section {
     padding: 0 4px;
     position: relative;
     text-decoration: none;
-    text-transform: uppercase;
     transition: all 0.5s ease;
+    font-weight: bold;
     -webkit-transition: all 0.5s ease;
 }
 
@@ -127,7 +139,6 @@ section {
     -webkit-transition: all 1s ease;
 }
 
-/* Animated Bottom Line */
 #navbar li a:before,
 #navbar li a:after {
     content: '';
@@ -164,10 +175,10 @@ section {
 
 
 /*
-                    Mobile Menu Menu Icon
+                    Mobile Menu Menu Icon created by Colby Friedman ( I suck at animations sorry)
   */
 @media(max-width: 640px) {
-    .menuIcon {
+    .nav-icon {
         cursor: pointer;
         display: block;
         position: fixed;
@@ -215,8 +226,8 @@ section {
     }
 
     .icon-bars.overlay {
-        background: rgb(97, 114, 129);
-        background: rgb(183, 199, 211);
+    background: rgb(147, 7, 240);
+        background: rgb(120, 11, 209);
         width: 20px;
         animation: middleBar 3s infinite 0.5s;
         -webkit-animation: middleBar 3s infinite 0.5s;
@@ -251,11 +262,11 @@ section {
     }
 
     .icon-bars.overlay::before {
-        background: rgb(97, 114, 129);
-        background: rgb(183, 199, 211);
+    background: rgb(147, 7, 240);
+        background: rgb(120, 11, 209);
         width: 10px;
-        animation: topBar 3s infinite 0.2s;
-        -webkit-animation: topBar 3s infinite 0s;
+        animation: topBar 3s infinite 0.1s;
+        -webkit-animation: topBar 2s infinite 0s;
     }
 
     @keyframes topBar {
@@ -287,8 +298,8 @@ section {
     }
 
     .icon-bars.overlay::after {
-        background: rgb(97, 114, 129);
-        background: rgb(183, 199, 211);
+        background: rgb(147, 7, 240);
+        background: rgb(120, 11, 209);
         width: 15px;
         animation: bottomBar 3s infinite 1s;
         -webkit-animation: bottomBar 3s infinite 1s;
@@ -324,27 +335,27 @@ section {
 
 
     /* Toggle Menu Icon */
-    .menuIcon.toggle .icon-bars {
+    .nav-icon.toggle .icon-bars {
         top: 5px;
         transform: translate3d(0, 5px, 0) rotate(135deg);
         transition-delay: 0.1s;
         transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-    .menuIcon.toggle .icon-bars::before {
+    .nav-icon.toggle .icon-bars::before {
         top: 0;
         transition-delay: 0.1s;
         opacity: 0;
     }
 
-    .menuIcon.toggle .icon-bars::after {
+    .nav-icon.toggle .icon-bars::after {
         top: 10px;
         transform: translate3d(0, -10px, 0) rotate(-270deg);
         transition-delay: 0.1s;
         transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-    .menuIcon.toggle .icon-bars.overlay {
+    .nav-icon.toggle .icon-bars.overlay {
         width: 20px;
         opacity: 0;
         -webkit-transition: all 0s ease 0s;
@@ -355,8 +366,8 @@ section {
 
 
 .overlay-menu {
-    background: lightblue;
-    color: rgb(13, 26, 38);
+    background: #4169e1;
+    color: rgb(237, 246, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,7 +401,7 @@ section {
 
 .overlay-menu li a:hover,
 .overlay-menu li a:active {
-    color: #4169e1;
+    color: #95a4cc;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
@@ -434,16 +445,22 @@ section {
     color: white;
     padding: 16px 32px;
     position: relative;
+    text-align: center;
     text-decoration: none;
     font-size: 16px;
     margin: 4px 2px;
     transition: 0.4s;
     cursor: pointer;
     width: 10%;
-    margin-left: 45%;
-    margin-right: 45%
+    border-radius: 10px;
 }
-
+.center {
+    top: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .button1 {
     width: 100px;
     font-size: auto;
@@ -466,13 +483,21 @@ section {
 
 /* ABOUT US  */
 .HeaderText {
+    top:25%;
     font-size: 45px;
     color: rgb(10, 10, 10);
     text-align: center;
     position: relative;
 }
-
+.HeaderTextTop{
+    top:2%;
+        font-size: 45px;
+        color: rgb(10, 10, 10);
+        text-align: center;
+        position: relative;
+}
 .BodyText {
+    top: 25%;
     font-size: 25px;
     color: rgba(10, 10, 10, 0.658);
     text-align: center;
@@ -485,7 +510,18 @@ section {
 
 /* OUR TEAM  */
 
-
+.wrapper {
+    position: relative;
+    width: 100%;
+    padding: 4em;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
 /* CARDS*/
 .card {
     position: reative;
@@ -493,7 +529,7 @@ section {
     background: #c4c2c267;
     border: 5px solid rgba(105, 99, 99, 0.082);
     width: 300px;
-    margin: 20px 15px;
+    margin: 20px 25px;
     min-width: 275px;
     overflow: hidden;
     transition: 0.3s;
@@ -502,6 +538,7 @@ section {
 }
 .card:hover {
     box-shadow: 0 25px 16px 0 rgba(0, 0, 0, 0.2);
+
 }
 .card__header {
     position: relative;
@@ -510,6 +547,7 @@ section {
     background-size: cover;
     height: 175px;
     width: 100%;
+
 }
     .card__user__image {
         position: absolute;
@@ -518,7 +556,7 @@ section {
         right: 0;
         margin: 0 auto;
         bottom: -45px;
-        ;
+        
         height: 120px;
         width: 120px;
         padding: 10px;
@@ -534,6 +572,7 @@ section {
                     border-radius: 50%;
                 }
 .card__text__container {
+    
     padding: 2.5em 1.25em;
     text-align: center;
 }
@@ -543,8 +582,6 @@ section {
         font-size: 26px;
         text-align: center;
         font-weight: 900;
-        text-transform: uppercase;
-        color: var(--color-dark-blue);
     }
 
     .card__text__job {
@@ -554,7 +591,6 @@ section {
         text-align: center;
         font-weight: 600;
         text-transform: uppercase;
-        color: var(--color-purple);
     }
 
     .card__text__about {
@@ -568,39 +604,7 @@ section {
     }
 
 
-.btn {
-    background-color: rgb(183, 199, 211);
-    position: relative;
-    background: var(--color-pale-green);
-    color: #000000;
-    font-family: var(--font-be);
-    display: inline-block;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 999px;
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: regular;
-    letter-spacing: 2px;
-    z-index: 100;
-    transition: 300ms ease;
-}
 
-.btn::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    transform: scale3d(.75, .75, .75);
-    opacity: 0;
-    top: 10px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-pale-green);
-    z-index: -5;
-    transition: 300ms ease;
-}
 
 @media screen and (max-width: 350px) {
     .wrapper {
@@ -611,4 +615,45 @@ section {
         min-width: 100%;
         max-width: 100%;
     }
+}
+
+
+.Box{
+    top: 35%;
+position: relative;
+    height: 75px;
+    width: 450px;
+    left: 10px;
+    background-color: rgba(62, 59, 240, 0);
+    opacity: .9;
+    border: 1px solid black;
+    border-radius: 10px;
+    }
+
+.textButton {
+    background-color: #4f6499;
+    border-radius: 5px;
+    width: 20%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    font-size: 25px;
+    border-spacing: 15px;
+    left:  50%;
+    top: 30%;
+    padding: 5px;
+}
+
+.TitleDESC {
+    color: #000000;
+    text-align: center;
+    position: relative;
+    left: 25%;
+    top: 15%;
+}
+.TitleJob {
+    color: #000000;
+    position: relative;
+    font-size: 25px;
+    left: 5%;
 }
