@@ -533,7 +533,6 @@ section {
     min-width: 275px;
     overflow: hidden;
     transition: 0.3s;
-    z-index: 100;
     border-radius: 14px;
 }
 .card:hover {
