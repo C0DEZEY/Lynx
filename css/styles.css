@@ -63,13 +63,13 @@ section {
     width: 70%;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 800px) {
     .nav-wrapper {
         width: 90%;
     }
 }
 
-@media(max-width: 638px) {
+@media(max-width: 800px) {
     .nav-wrapper {
         width: 100%;
     }
@@ -85,7 +85,7 @@ section {
     
 }
 
-@media(max-width: 768px) {
+@media(max-width: 800px) {
     .logo {
       margin-left: 5px; 
     }
@@ -102,7 +102,7 @@ section {
     -webkit-transition: transform 0.5s ease-out;
 }
 
-@media(max-width: 640px) {
+@media(max-width: 800px) {
     #navbar ul {
         display: none;
     }
@@ -177,7 +177,7 @@ section {
 /*
                     Mobile Menu Menu Icon created by Colby Friedman ( I suck at animations sorry)
   */
-@media(max-width: 640px) {
+@media(max-width: 800px) {
     .nav-icon {
         cursor: pointer;
         display: block;
@@ -376,7 +376,7 @@ section {
     right: 0;
     padding-right: 15px;
     transform: translateX(-100%);
-    width: 100vw;
+    width: 120vw;
     height: 100vh;
     -webkit-transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
@@ -533,6 +533,7 @@ section {
     min-width: 275px;
     overflow: hidden;
     transition: 0.3s;
+    z-index: 100;
     border-radius: 14px;
 }
 .card:hover {
@@ -605,7 +606,7 @@ section {
 
 
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 800px) {
     .wrapper {
         padding: 3em 1.2em;
     }
