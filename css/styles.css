@@ -15,6 +15,12 @@ a {
     font-size: inherit;
     text-decoration: none;
 }
+.cooltitle{
+    height: 350px;
+    background-color: #cccccc00;
+    background-image: radial-gradient(#4169e1,#4169e1fa);
+}
+
 .materhead {
     height: 1000px;
 }
