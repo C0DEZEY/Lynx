@@ -37,7 +37,7 @@ a {
     height: 850px;
 }
 .jobs{
-    height:auto;
+    height: 350px;
 }
 .menu{
     height: 850px;
@@ -58,7 +58,7 @@ section {
     height: auto;
     position: relative;
 }
-/*  Create a fixed postion so you can't scrol while menus are open*/
+/*  Create a fixed postion so you can't scroll while menus are open*/
  .fixed-position {
     position: fixed;
  }
@@ -385,12 +385,13 @@ section {
 
 
 .overlay-menu {
+    z-index: 10;
     background: #4169e1;
     color: rgb(237, 246, 255);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding-right: 15px;
@@ -493,7 +494,19 @@ section {
     text-overflow: ellipsis
    
 }
-
+.button2 {
+    top:20%;
+    width: 100px;
+    font-size: auto;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 2px solid #4169e1;
+    border-radius: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
 .button1:hover {
     background-color: #4169e1;
     color: white;
@@ -531,6 +544,16 @@ section {
     width: 450px;
     margin: auto;
     
+}
+.BodyText1 {
+    top: 25%;
+    font-size: 25px;
+    color: rgba(10, 10, 10, 0.658);
+    text-align: center;
+    position: relative;
+    width: 85%;
+    margin: auto;
+
 }
 /* CONTACT US  */
 
@@ -692,7 +715,7 @@ position: relative;
             position: relative;
             width: 650px;
             margin: auto;
-                z-index: 10;
+                    padding: 50px;
 }
 .SideImgL {
             height: 35%;
@@ -704,6 +727,7 @@ position: relative;
             width: auto;
             margin: auto;
             border-radius: 25px;
+                flex: 0 0 auto;
 }
 .SideTextL {
     top: 15%;
@@ -715,7 +739,8 @@ position: relative;
     width: 650px;
     margin: auto;
     white-space: wrap;
-    z-index: 10;
+    padding: 50px;
+        flex: 0 0 auto;
 }
 
 .SideImgR {
