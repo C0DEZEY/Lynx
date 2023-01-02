@@ -37,7 +37,7 @@ a {
     height: 850px;
 }
 .jobs{
-    height: 350px;
+    height: 650px;
 }
 .menu{
     height: 850px;
@@ -739,7 +739,6 @@ position: relative;
     width: 650px;
     margin: auto;
     white-space: wrap;
-    padding: 50px;
         flex: 0 0 auto;
 }
 
